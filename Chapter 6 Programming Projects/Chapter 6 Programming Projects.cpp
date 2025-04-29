@@ -4,9 +4,25 @@
 
 #include <iostream>
 
+using namespace std;
+
 int main()
 {
-    std::cout << "Hello World!\n";
+	float RectangleLength;
+	float RectangleWidth;
+
+
+   cout << "Input Rectangle Length:\n";
+   cin >> RectangleLength;
+
+   cout << "Input Rectangle Width:\n";
+   cin >> RectangleWidth; 
+
+   if (
+
+	   RectangleLength || RectangleWidth < 0; 
+
+	 then 
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu
