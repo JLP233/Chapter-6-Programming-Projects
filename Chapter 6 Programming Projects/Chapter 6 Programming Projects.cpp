@@ -55,3 +55,10 @@ float GetWallAreaPerRoom(int RoomNumber)
 
 
 //Display formated results 
+
+
+int main() {
+
+
+
+}
