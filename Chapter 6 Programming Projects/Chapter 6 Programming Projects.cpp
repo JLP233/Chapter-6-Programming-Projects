@@ -3,7 +3,7 @@
 // This program determines which geographic regions within a major city  had the fewest reported automobile accidents last year.
 
 #include <iostream>
-#include <string>
+#include <iomanip>
 
 using namespace std;
 
@@ -13,3 +13,11 @@ float ConversionToCelsius(int Fahrenheit)
 	return (5.0 / 9.0) * (Fahrenheit - 32);
 }
 
+//Display table function
+void DisplayCTable() {
+	cout << "Fahrenheit to Celsius" << endl;
+	for (int FTemp = 0; FTemp <= 20; FTemp++)   
+	{ 
+		float Celsius = ConversionToCelsius(FTemp); 
+		cout << FTemp << "=" << Celsius << endl;
+}
