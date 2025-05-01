@@ -26,7 +26,7 @@ int main()
 
     return 0;
 }
-
+//Function to validate user inputs
 int GetAccidents(string RegionName) {
     int Accidents;
 
@@ -42,7 +42,7 @@ int GetAccidents(string RegionName) {
 
     return Accidents;
 }
-
+//Function to find and display lowest value
 void FindLowest(int North, int South, int East, int West, int Central) 
 {
     string Region = "North";
