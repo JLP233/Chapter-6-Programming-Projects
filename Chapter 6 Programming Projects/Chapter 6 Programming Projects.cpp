@@ -44,4 +44,13 @@ float FindLowestScore(float S1, float S2, float S3, float S4, float S5)
 	return Lowest; 
 }
 
+//Function to drop highest and lowest then average middle three scores
+float CalcFinalScore(float S1, float S2, float S3, float S4, float S5)
+{
+	float Lowest = FindLowestScore(S1, S2, S3, S4, S5);
+	float Highest = FindHighestScore(S1, S2, S3, S4, S5);
+	float FinalScore = (S1, S2, S3, S4, S5); -Lowest - Highest;
+	return FinalScore / 3;
+}
+
 
