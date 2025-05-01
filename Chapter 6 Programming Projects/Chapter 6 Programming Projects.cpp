@@ -7,7 +7,7 @@
 
 using namespace std;
 
-//User input and validate number of rooms
+//Get user input and validate number of rooms
 int GetNumberOfRooms() {
     int Rooms; 
     do {
@@ -20,3 +20,38 @@ int GetNumberOfRooms() {
     } while (Rooms < 1); 
     return Rooms; 
 }
+
+//Get square footage wall space per room and validate
+float GetWallAreaPerRoom(int RoomNumber) 
+{
+    float WallSquareFootage; 
+    do {
+        cout << "Enter square feet of wall space for room #" << RoomNumber;
+        cin >> WallSquareFootage; 
+        if (WallSquareFootage < 0) 
+        {
+            cout << "Invalid input. Square footage cannot be negative.\n";
+        }
+    } while (WallSquareFootage < 0); 
+    return WallSquareFootage;  
+}
+
+//Get paint cost per gallon and validate
+
+
+//Calculate total wall area to be painted
+
+
+//Calculate number of gallons of paint needed
+
+
+//Calculate paint cost
+
+
+//Calculate labor hours
+
+
+//Calculate total labor charges
+
+
+//Display formated results 
