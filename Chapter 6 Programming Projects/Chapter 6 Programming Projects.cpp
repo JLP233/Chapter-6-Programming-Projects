@@ -1,6 +1,6 @@
 // Chapter 6 Programming Projects.cpp : This file contains the 'main' function. Program execution begins and ends there.
 //
-// This program determines which geographic regions within a major city  had the fewest reported automobile accidents last year.
+// This program displays a conversion chart for Fahrenheit to Celsius temperatures.
 
 #include <iostream>
 #include <iomanip>
