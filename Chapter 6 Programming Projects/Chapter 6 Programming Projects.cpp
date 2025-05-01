@@ -22,5 +22,26 @@ void GetRawScores( float & Score)
 	}
 }
 
+//Function to find highest score
+float FindHighestScore(float S1, float S2, float S3, float S4, float S5)
+{
+	float Highest = S1;
+	if (S2 > Highest) Highest = S2;
+	if (S3 > Highest) Highest = S3;
+	if (S4 > Highest) Highest = S4;
+	if (S5 > Highest) Highest = S5;
+	return Highest;
+}
+
+//Fucntion to find lowest score
+float FindLowestScore(float S1, float S2, float S3, float S4, float S5)
+{
+	float Lowest  = S1;
+	if (S2 > Lowest) Lowest = S2; 
+	if (S3 > Lowest) Lowest = S3; 
+	if (S4 > Lowest) Lowest = S4; 
+	if (S5 > Lowest) Lowest = S5; 
+	return Lowest; 
+}
 
 
