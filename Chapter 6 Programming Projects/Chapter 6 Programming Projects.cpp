@@ -18,8 +18,9 @@ void GetRawScores( float & Score)
 		{
 			cout << "Invalid input. Score must be between 0 and 10.\n";
 		}
-		while (Score < 0 || Score > 10);
 	}
+	while (Score < 0 || Score > 10);
+	
 }
 
 //Function to find highest score
@@ -37,10 +38,10 @@ float FindHighestScore(float S1, float S2, float S3, float S4, float S5)
 float FindLowestScore(float S1, float S2, float S3, float S4, float S5)
 {
 	float Lowest  = S1;
-	if (S2 > Lowest) Lowest = S2; 
-	if (S3 > Lowest) Lowest = S3; 
-	if (S4 > Lowest) Lowest = S4; 
-	if (S5 > Lowest) Lowest = S5; 
+	if (S2 < Lowest) Lowest = S2; 
+	if (S3 < Lowest) Lowest = S3; 
+	if (S4 < Lowest) Lowest = S4; 
+	if (S5 < Lowest) Lowest = S5; 
 	return Lowest; 
 }
 
@@ -49,7 +50,7 @@ float CalcFinalScore(float S1, float S2, float S3, float S4, float S5)
 {
 	float Lowest = FindLowestScore(S1, S2, S3, S4, S5);
 	float Highest = FindHighestScore(S1, S2, S3, S4, S5);
-	float FinalScore = (S1, S2, S3, S4, S5); -Lowest - Highest;
+	float FinalScore = (S1 + S2 + S3 + S4 + S5) - Lowest - Highest;
 	return FinalScore / 3;
 }
 
@@ -59,4 +60,18 @@ void DisplayScore(float AverageScore)
 	cout << "Final Calculated Average Score: " << AverageScore << endl;
 }
 
+int main()
+{
+	float S1, S2, S3, S4, S5;
 
+	GetRawScores(S1);
+	GetRawScores(S2);
+	GetRawScores(S3);
+	GetRawScores(S4);
+	GetRawScores(S5);
+
+	float AverageScore = CalcFinalScore(S1, S2, S3, S4, S5);
+	DisplayScore(AverageScore);
+
+	return 0;
+}
