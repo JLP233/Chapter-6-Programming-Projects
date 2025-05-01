@@ -53,4 +53,10 @@ float CalcFinalScore(float S1, float S2, float S3, float S4, float S5)
 	return FinalScore / 3;
 }
 
+//Function to display score
+void DisplayScore(float AverageScore) 
+{
+	cout << "Final Calculated Average Score: " << AverageScore << endl;
+}
+
 
