@@ -1,51 +1,28 @@
 // Chapter 6 Programming Projects.cpp : This file contains the 'main' function. Program execution begins and ends there.
 //
-// This program calculates and displays the area and perimeter of a rectangle based on user input of side lengths.
+// This program determines which geographic regions within a major city  had the fewest reported automobile accidents last year.
 
 #include <iostream>
+#include <string>
 
 using namespace std;
 
+int GetAccidents(string);
+void FindLowest(int north, int south, int east, int west, int central);
+
 int main()
 {
-	float RectangleLength;
-	float RectangleWidth;
-	float RectangleArea;
-	float RectanglePerimeter;
-	int UserChoice;
+    int North, South, East, West, Central;
 
-	do {
+    cout << "Enter the number of automobile accidents for each region last year:\n";
 
-		//Request User inputs for length and width
-		cout << "Input Rectangle Length:\n";
-		cin >> RectangleLength;
+    North = GetAccidents("North");
+    South = GetAccidents("South");
+    East = GetAccidents("East");
+    West = GetAccidents("West");
+    Central = GetAccidents("Central");
 
-		cout << "Input Rectangle Width:\n";
-		cin >> RectangleWidth;
+    FindLowest(North, South, East, West, Central); 
 
-		//Input validation
-		if (RectangleLength < 0 || RectangleWidth < 0)
-		{
-			cout << "Input Invalid. Values must be greater than zero.\n";
-		}
-
-		//Area and Perimeter Calculation
-		else
-		{
-			RectangleArea = RectangleLength * RectangleWidth;
-			cout << "The area of the rectangle is: " << RectangleArea << endl;
-			RectanglePerimeter = (2 * RectangleLength) + (2 * RectangleWidth);
-			cout << "The perimeter of the rectangle is: " << RectanglePerimeter << endl;
-		}
-
-		//Process another rectangle or quit
-		cout << "Enter 1 to process another rectangle. Enter any other value to quit." << endl;
-
-		cin >> UserChoice;
-
-	}  while (UserChoice == 1);
-
-	cout << "Goodbye." << endl;
-
-	return 0;
+    return 0;
 }
