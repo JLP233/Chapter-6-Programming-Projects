@@ -16,8 +16,15 @@ float ConversionToCelsius(int Fahrenheit)
 //Display table function
 void DisplayCTable() {
 	cout << "Fahrenheit to Celsius" << endl;
-	for (int FTemp = 0; FTemp <= 20; FTemp++)   
-	{ 
-		float Celsius = ConversionToCelsius(FTemp); 
-		cout << FTemp << "=" << Celsius << endl;
+	for (int FTemp = 0; FTemp <= 20; FTemp++)
+	{
+		float Celsius = ConversionToCelsius(FTemp);
+		cout << FTemp << " = " << Celsius << endl;
+	}
 }
+
+int main() {
+	DisplayCTable();
+	return 0;
+}
+
